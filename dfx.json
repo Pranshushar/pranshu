@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "pranshu_backend": {
+      "main": "src/pranshu_backend/main.mo",
+      "type": "motoko"
+    },
+    "pranshu_frontend": {
+      "dependencies": [
+        "pranshu_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/pranshu_frontend/src/index.html"
+      },
+      "source": [
+        "src/pranshu_frontend/assets",
+        "dist/pranshu_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
